@@ -11,8 +11,8 @@ namespace WindowsFormsApp1.Ado.NET
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Фурнитура()
         {
-            Склад_фурнитуры = new HashSet<Склад_фурнитуры>();
-            Фурнитура_изделия = new HashSet<Фурнитура_изделия>();
+            СкладФурнитуры = new HashSet<СкладФурнитуры>();
+            ФурнитураИзделия = new HashSet<ФурнитураИзделия>();
         }
 
         [Key]
@@ -31,7 +31,7 @@ namespace WindowsFormsApp1.Ado.NET
 
         public double? Длина { get; set; }
 
-        public decimal? Вес { get; set; }
+        public double? Вес { get; set; }
 
         [Column(TypeName = "image")]
         public byte[] Изображение { get; set; }
@@ -39,9 +39,9 @@ namespace WindowsFormsApp1.Ado.NET
         public decimal Цена { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Склад_фурнитуры> Склад_фурнитуры { get; set; }
+        public virtual ICollection<СкладФурнитуры> СкладФурнитуры { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Фурнитура_изделия> Фурнитура_изделия { get; set; }
+        public virtual ICollection<ФурнитураИзделия> ФурнитураИзделия { get; set; }
     }
 }

@@ -6,12 +6,13 @@ namespace WindowsFormsApp1.Ado.NET
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    public partial class Изделия
+    public partial class Изделие
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Изделия()
+        public Изделие()
         {
-            Заказные_изделия = new HashSet<Заказные_изделия>();
+            ЗаказанныеИзделия = new HashSet<ЗаказанныеИзделия>();
+            ФурнитураИзделия = new HashSet<ФурнитураИзделия>();
             Ткань = new HashSet<Ткань>();
         }
 
@@ -20,7 +21,7 @@ namespace WindowsFormsApp1.Ado.NET
         public string Артикул { get; set; }
 
         [Required]
-        [StringLength(150)]
+        [StringLength(50)]
         public string Наименование { get; set; }
 
         public double Ширина { get; set; }
@@ -34,7 +35,10 @@ namespace WindowsFormsApp1.Ado.NET
         public string Комментарий { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Заказные_изделия> Заказные_изделия { get; set; }
+        public virtual ICollection<ЗаказанныеИзделия> ЗаказанныеИзделия { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ФурнитураИзделия> ФурнитураИзделия { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Ткань> Ткань { get; set; }

@@ -11,8 +11,8 @@ namespace WindowsFormsApp1.Ado.NET
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Ткань()
         {
-            Склад_ткани = new HashSet<Склад_ткани>();
-            Изделия = new HashSet<Изделия>();
+            СкладТкани = new HashSet<СкладТкани>();
+            Изделие = new HashSet<Изделие>();
         }
 
         [Key]
@@ -42,9 +42,9 @@ namespace WindowsFormsApp1.Ado.NET
         public decimal Цена { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Склад_ткани> Склад_ткани { get; set; }
+        public virtual ICollection<СкладТкани> СкладТкани { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Изделия> Изделия { get; set; }
+        public virtual ICollection<Изделие> Изделие { get; set; }
     }
 }

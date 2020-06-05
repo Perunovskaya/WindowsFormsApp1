@@ -55,25 +55,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Ado.NET\Demo.cs" />
-    <Compile Include="Ado.NET\sysdiagrams.cs" />
+    <Compile Include="Ado.NET\Model1.cs" />
     <Compile Include="Ado.NET\Заказ.cs" />
-    <Compile Include="Ado.NET\Заказные_изделия.cs" />
-    <Compile Include="Ado.NET\Изделия.cs" />
-    <Compile Include="Ado.NET\Пользователи.cs" />
-    <Compile Include="Ado.NET\Поступление_материалов.cs" />
-    <Compile Include="Ado.NET\Склад_ткани.cs" />
-    <Compile Include="Ado.NET\Склад_фурнитуры.cs" />
+    <Compile Include="Ado.NET\ЗаказанныеИзделия.cs" />
+    <Compile Include="Ado.NET\Изделие.cs" />
+    <Compile Include="Ado.NET\Пользователь.cs" />
+    <Compile Include="Ado.NET\СкладТкани.cs" />
+    <Compile Include="Ado.NET\СкладФурнитуры.cs" />
     <Compile Include="Ado.NET\Ткань.cs" />
     <Compile Include="Ado.NET\Фурнитура.cs" />
-    <Compile Include="Ado.NET\Фурнитура_изделия.cs" />
+    <Compile Include="Ado.NET\ФурнитураИзделия.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="user4DataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>user4DataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Авторизация.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -210,17 +203,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="user4DataSet.xsc">
-      <DependentUpon>user4DataSet.xsd</DependentUpon>
-    </None>
-    <None Include="user4DataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>user4DataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="user4DataSet.xss">
-      <DependentUpon>user4DataSet.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

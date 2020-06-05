@@ -6,10 +6,10 @@ namespace WindowsFormsApp1.Ado.NET
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    public partial class Пользователи
+    public partial class Пользователь
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Пользователи()
+        public Пользователь()
         {
             Заказ = new HashSet<Заказ>();
             Заказ1 = new HashSet<Заказ>();

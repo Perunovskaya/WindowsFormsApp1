@@ -8,19 +8,22 @@ namespace WindowsFormsApp1.Ado.NET
 
     public partial class Заказ
     {
-        [Key]
-        [Column(Order = 0)]
-        [StringLength(50)]
-        public string Номер { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Заказ()
+        {
+            ЗаказанныеИзделия = new HashSet<ЗаказанныеИзделия>();
+        }
 
         [Key]
-        [Column(Order = 1)]
-        [StringLength(50)]
-        public string Дата { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int Номер { get; set; }
+
+        [Column(TypeName = "date")]
+        public DateTime Дата { get; set; }
 
         [Required]
         [StringLength(50)]
-        public string Этап_выполнения { get; set; }
+        public string ЭтапВыполнения { get; set; }
 
         [Required]
         [StringLength(50)]
@@ -29,13 +32,13 @@ namespace WindowsFormsApp1.Ado.NET
         [StringLength(50)]
         public string Менеджер { get; set; }
 
-        [StringLength(50)]
-        public string Стоимость { get; set; }
+        public decimal? Стоимость { get; set; }
 
-        public virtual Пользователи Пользователи { get; set; }
+        public virtual Пользователь Пользователь { get; set; }
 
-        public virtual Пользователи Пользователи1 { get; set; }
+        public virtual Пользователь Пользователь1 { get; set; }
 
-        public virtual Заказные_изделия Заказные_изделия { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ЗаказанныеИзделия> ЗаказанныеИзделия { get; set; }
     }
 }
