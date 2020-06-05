@@ -20,7 +20,7 @@ namespace WindowsFormsApp1
         private void Изделия_Load(object sender, EventArgs e)
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "user4DataSet.Изделия". При необходимости она может быть перемещена или удалена.
-            this.изделияTableAdapter.Fill(this.user4DataSet.Изделия);
+            this.изделиеTableAdapter.Fill(this.garmentFactoryDataSet.Изделие);
 
         }
 
@@ -38,6 +38,21 @@ namespace WindowsFormsApp1
                 frm.Visible = true;
                 this.Hide();
             }
+        }
+
+        private void изделиеBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.изделиеBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.garmentFactoryDataSet);
+
+        }
+
+        private void Изделия_Load_1(object sender, EventArgs e)
+        {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "garmentFactoryDataSet.Изделие". При необходимости она может быть перемещена или удалена.
+            this.изделиеTableAdapter.Fill(this.garmentFactoryDataSet.Изделие);
+
         }
     }
 }

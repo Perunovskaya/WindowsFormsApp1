@@ -20,7 +20,22 @@ namespace WindowsFormsApp1
         private void Ткани_Load(object sender, EventArgs e)
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "user4DataSet.Ткань". При необходимости она может быть перемещена или удалена.
-            this.тканьTableAdapter.Fill(this.user4DataSet.Ткань);
+            this.тканьTableAdapter.Fill(this.garmentFactoryDataSet.Ткань);
+
+        }
+
+        private void тканьBindingSource1BindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.тканьBindingSource1.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.garmentFactoryDataSet);
+
+        }
+
+        private void Ткани_Load_1(object sender, EventArgs e)
+        {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "garmentFactoryDataSet.Ткань". При необходимости она может быть перемещена или удалена.
+            this.тканьTableAdapter.Fill(this.garmentFactoryDataSet.Ткань);
 
         }
     }

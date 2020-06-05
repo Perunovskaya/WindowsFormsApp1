@@ -43,9 +43,7 @@ namespace WindowsFormsApp1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form spm = new Список_поступаемых_материалов();
-            spm.Visible = true;
-            this.Close();
+
         }
     }
 }
