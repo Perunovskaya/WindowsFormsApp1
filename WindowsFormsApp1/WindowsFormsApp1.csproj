@@ -55,7 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Ado.NET\Model1.cs" />
+    <Compile Include="Ado.NET\Demo.cs" />
     <Compile Include="Ado.NET\Заказ.cs" />
     <Compile Include="Ado.NET\ЗаказанныеИзделия.cs" />
     <Compile Include="Ado.NET\Изделие.cs" />

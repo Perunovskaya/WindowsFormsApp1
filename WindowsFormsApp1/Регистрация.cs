@@ -15,7 +15,7 @@ namespace WindowsFormsApp1
     public partial class Регистрация : Form
     {
         Demo db = new Demo();
-        public static Пользователи user { get; set; }
+        public static Пользователь user { get; set; }
 
         public Регистрация()
         {
@@ -37,7 +37,7 @@ namespace WindowsFormsApp1
             var prov3 = new Regex(@"[!@#$%^.]+");
 
             bool proverka = prov1.IsMatch(pass) && prov2.IsMatch(pass) && prov3.IsMatch(pass);
-            Пользователи usr = db.Пользователи.Find(login.Text);
+            Пользователь usr = db.Пользователь.Find(login.Text);
 
             //проверка заполнения полей
             if (login.ToString() !="" && password.ToString() !="" && role.ToString() !="")
@@ -49,12 +49,12 @@ namespace WindowsFormsApp1
                     if(proverka==true && pass.Length >=6)
                     {
                         //добавление пользователя 
-                        usr = new Пользователи();
+                        usr = new Пользователь();
                         usr.Логин = login.Text;
                         usr.Пароль = password.Text;
                         usr.Роль = role.Text;
                         usr.Наименование = name.Text;
-                        db.Пользователи.Add(usr);
+                        db.Пользователь.Add(usr);
                         try
                         {
                             db.SaveChanges();

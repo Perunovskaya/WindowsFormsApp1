@@ -14,7 +14,7 @@ namespace WindowsFormsApp1
     public partial class Авторизация : Form
         
     {
-        public static Пользователи user { get; set; }
+        public static Пользователь user { get; set; }
         Demo db = new Demo();
         public static int av = 0;
         public Авторизация()
@@ -31,7 +31,7 @@ namespace WindowsFormsApp1
                 return;
             }
 
-            Пользователи usr = db.Пользователи.Find(login.Text);
+            Пользователь usr = db.Пользователь.Find(login.Text);
 
             if ((usr != null) && (usr.Пароль == password.Text))
             {
